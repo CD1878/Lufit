@@ -71,17 +71,20 @@ const Naschools: React.FC<Props> = ({ onNavigate }) => {
                 <p className="text-anthracite font-medium">Meer deelname, minder administratie en een breed aanbod dat past bij de schoolvisie.</p>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-4 hidden md:block">
                 <Button variant="primary" size="lg" onClick={() => onNavigate(Page.Contact)}>Stel samen een programma op</Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative flex flex-col items-center">
               <div className="absolute inset-0 bg-gold/20 rounded-full blur-3xl transform translate-x-10 translate-y-10"></div>
               <img
                 src="/fotos/naschools_hero.jpeg"
                 alt="Coördinatie"
-                className="relative rounded-[2rem] shadow-2xl w-full object-cover h-[300px] md:h-[400px] z-10"
+                className="relative rounded-[2rem] shadow-2xl w-full object-cover h-[300px] md:h-[400px] z-10 mb-8 md:mb-0"
               />
+              <div className="md:hidden w-full">
+                <Button variant="primary" size="lg" className="w-full justify-center" onClick={() => onNavigate(Page.Contact)}>Stel samen een programma op</Button>
+              </div>
             </div>
           </div>
         </div>
