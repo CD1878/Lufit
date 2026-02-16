@@ -47,21 +47,21 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Column 3: Contact */}
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="text-gold font-heading font-bold text-lg">Contact</h3>
-            <div className="space-y-3">
-              <a href="tel:0650402352" className="flex items-center justify-center md:justify-start space-x-3 text-gray-400 hover:text-gold transition-colors group">
-                <div className="bg-gray-800 p-2 rounded-full group-hover:bg-gold group-hover:text-white transition-colors">
+            <div className="space-y-3 w-fit md:w-full">
+              <a href="tel:0650402352" className="flex items-center space-x-3 text-gray-400 hover:text-gold transition-colors group">
+                <div className="bg-gray-800 p-2 rounded-full group-hover:bg-gold group-hover:text-white transition-colors flex-shrink-0">
                   <Phone size={16} />
                 </div>
                 <span>0650402352</span>
               </a>
-              <a href="mailto:info@lufit.nl" className="flex items-center justify-center md:justify-start space-x-3 text-gray-400 hover:text-gold transition-colors group">
-                <div className="bg-gray-800 p-2 rounded-full group-hover:bg-gold group-hover:text-white transition-colors">
+              <a href="mailto:info@lufit.nl" className="flex items-center space-x-3 text-gray-400 hover:text-gold transition-colors group">
+                <div className="bg-gray-800 p-2 rounded-full group-hover:bg-gold group-hover:text-white transition-colors flex-shrink-0">
                   <Mail size={16} />
                 </div>
                 <span>info@lufit.nl</span>
               </a>
-              <div className="flex items-center justify-center md:justify-start space-x-3 text-gray-400">
-                <div className="bg-gray-800 p-2 rounded-full">
+              <div className="flex items-center space-x-3 text-gray-400">
+                <div className="bg-gray-800 p-2 rounded-full flex-shrink-0">
                   <MapPin size={16} />
                 </div>
                 <span>Amsterdam & Omstreken</span>
