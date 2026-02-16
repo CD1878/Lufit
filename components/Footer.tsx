@@ -10,12 +10,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   return (
     <footer className="bg-anthracite text-white pt-16 pb-8 border-t-4 border-gold">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12 text-center md:text-left">
           {/* Column 1: Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-               <Shield className="h-6 w-6 text-gold fill-gold" />
-               <span className="text-xl font-heading font-bold">LU FIT</span>
+          <div className="space-y-4 flex flex-col items-center md:items-start">
+            <div className="flex items-center space-x-3">
+              <img src="/logo.png" alt="Lu Fit Logo" className="h-10 w-auto" />
+              <span className="text-xl font-heading font-bold">LU FIT</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
               Wij zorgen dat ieder kind kan bewegen, ontdekken en groeien. Eén partner die alles regelt voor scholen en gemeenten.
@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 { label: 'Coördinatie & Regie', page: Page.TotaalOntzorgen },
               ].map((link) => (
                 <li key={link.label}>
-                  <button 
+                  <button
                     onClick={() => onNavigate(link.page)}
                     className="text-gray-400 hover:text-gold transition-colors text-sm"
                   >
@@ -45,22 +45,22 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           {/* Column 3: Contact */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="text-gold font-heading font-bold text-lg">Contact</h3>
             <div className="space-y-3">
-              <a href="tel:0650402352" className="flex items-center space-x-3 text-gray-400 hover:text-gold transition-colors group">
+              <a href="tel:0650402352" className="flex items-center justify-center md:justify-start space-x-3 text-gray-400 hover:text-gold transition-colors group">
                 <div className="bg-gray-800 p-2 rounded-full group-hover:bg-gold group-hover:text-white transition-colors">
                   <Phone size={16} />
                 </div>
                 <span>0650402352</span>
               </a>
-              <a href="mailto:info@lufit.nl" className="flex items-center space-x-3 text-gray-400 hover:text-gold transition-colors group">
+              <a href="mailto:info@lufit.nl" className="flex items-center justify-center md:justify-start space-x-3 text-gray-400 hover:text-gold transition-colors group">
                 <div className="bg-gray-800 p-2 rounded-full group-hover:bg-gold group-hover:text-white transition-colors">
                   <Mail size={16} />
                 </div>
                 <span>info@lufit.nl</span>
               </a>
-              <div className="flex items-center space-x-3 text-gray-400">
+              <div className="flex items-center justify-center md:justify-start space-x-3 text-gray-400">
                 <div className="bg-gray-800 p-2 rounded-full">
                   <MapPin size={16} />
                 </div>
@@ -70,8 +70,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} Lu Fit. Alle rechten voorbehouden.</p>
+        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+          <p>&copy; {new Date().getFullYear()} Lu Fit. All rights reserved | Made by <a href="https://www.chefdigital.nl" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Chef Digital</a></p>
         </div>
       </div>
     </footer>

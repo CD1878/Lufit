@@ -30,15 +30,12 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div 
-            className="flex items-center space-x-2 cursor-pointer" 
+          <div
+            className="flex items-center space-x-3 cursor-pointer"
             onClick={() => handleNavClick(Page.Home)}
           >
-            <Shield className="h-8 w-8 text-gold fill-gold" />
-            <div className="flex flex-col">
-                <span className="text-2xl font-heading font-bold tracking-wide">LU FIT</span>
-                <span className="text-[10px] text-gray-400 font-sans tracking-wider">ONDERWIJS IN BEWEGING</span>
-            </div>
+            <img src="/logo.png" alt="Lu Fit Logo" className="h-12 w-auto" />
+
           </div>
 
           {/* Desktop Nav */}
@@ -47,9 +44,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.page)}
-                className={`text-sm font-semibold uppercase tracking-wide transition-colors duration-200 hover:text-gold ${
-                  currentPage === item.page ? 'text-gold border-b-2 border-gold' : 'text-gray-300'
-                }`}
+                className={`text-sm font-semibold uppercase tracking-wide transition-colors duration-200 hover:text-gold ${currentPage === item.page ? 'text-gold border-b-2 border-gold' : 'text-gray-300'
+                  }`}
               >
                 {item.label}
               </button>
@@ -57,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="lg:hidden text-white hover:text-gold transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -74,9 +70,8 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.page)}
-                className={`text-left text-lg font-medium py-2 px-4 rounded transition-colors ${
-                  currentPage === item.page ? 'bg-gray-800 text-gold' : 'text-gray-200 hover:bg-gray-800'
-                }`}
+                className={`text-left text-lg font-medium py-2 px-4 rounded transition-colors ${currentPage === item.page ? 'bg-gray-800 text-gold' : 'text-gray-200 hover:bg-gray-800'
+                  }`}
               >
                 {item.label}
               </button>
