@@ -72,7 +72,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="container mx-auto px-4 mt-8">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div className="space-y-6 md:space-y-8">
-              <div className="inline-block px-4 py-1 rounded-full bg-gold/10 text-gold font-bold uppercase tracking-wider text-sm">
+              <div className="inline-block px-4 py-1 rounded-full bg-gold/10 text-gold font-bold uppercase tracking-wider text-base md:text-sm">
                 Het Probleem & De Oplossing
               </div>
               <h2 className="text-3xl md:text-5xl font-heading font-bold text-anthracite leading-tight">
