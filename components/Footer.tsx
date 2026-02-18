@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Column 1: Brand */}
           <div className="space-y-4 flex flex-col items-center md:items-start">
             <div className="flex items-center space-x-3">
-              <img src="/logo.png" alt="Lu Fit Logo" className="h-10 w-auto" />
+              <img src="/Final.png" alt="Lu Fit Logo" className="h-10 w-auto" />
               <span className="text-xl font-heading font-bold">LU FIT</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
