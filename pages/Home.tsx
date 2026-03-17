@@ -38,14 +38,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             
             {/* Target Audiences */}
             <div className="pt-8 md:pt-12 border-t border-gray-700/50 mt-8">
-              <p className="text-sm md:text-base text-gray-300 uppercase tracking-widest font-bold mb-5 flex items-center">
-                <span className="w-8 h-1 bg-gold mr-4 rounded-full"></span>
+              <p className="text-sm md:text-[15px] text-gray-300 uppercase tracking-[0.15em] font-semibold mb-6 flex items-center">
+                <span className="w-6 h-0.5 bg-gold mr-4"></span>
                 De expert in beweging voor:
               </p>
-              <div className="flex flex-wrap gap-3 md:gap-4">
+              <div className="flex flex-wrap gap-3">
                 {['Basisscholen', 'Middelbare scholen', 'Gemeenten', 'Kinderopvang'].map((target, idx) => (
-                  <span key={idx} className="bg-white/10 hover:bg-gold/20 transition-colors text-white px-5 py-2.5 rounded-full text-sm md:text-base font-semibold border border-white/20 backdrop-blur-md shadow-lg flex items-center">
-                    <CheckCircle size={16} className="text-gold mr-2" />
+                  <span key={idx} className="bg-[#3A3A3A]/80 hover:bg-[#4A4A4A] transition-colors text-gray-200 px-5 py-2.5 rounded-full text-[15px] font-medium border border-gray-500/50 flex items-center shadow-sm">
+                    <CheckCircle size={14} className="text-gold mr-2.5 opacity-80" />
                     {target}
                   </span>
                 ))}
