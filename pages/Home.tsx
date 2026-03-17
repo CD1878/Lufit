@@ -11,7 +11,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
     <div className="fade-in bg-gray-50">
       {/* Hero Section - Straight Bottom */}
-      <section className="relative bg-anthracite text-white min-h-[70vh] md:min-h-[85vh] flex items-center overflow-hidden shadow-2xl">
+      <section className="relative bg-anthracite text-white pt-32 pb-40 md:pt-40 md:pb-56 min-h-[70vh] md:min-h-[85vh] flex flex-col justify-center overflow-hidden shadow-2xl">
         <div className="absolute inset-0 z-0">
           <img
             src="/fotos/home_hero.jpeg"
@@ -37,11 +37,15 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </div>
             
             {/* Target Audiences */}
-            <div className="pt-8 md:pt-12 border-t border-gray-700/50">
-              <p className="text-sm text-gray-400 uppercase tracking-widest font-semibold mb-4">De expert in beweging voor:</p>
-              <div className="flex flex-wrap gap-3">
+            <div className="pt-8 md:pt-12 border-t border-gray-700/50 mt-8">
+              <p className="text-sm md:text-base text-gray-300 uppercase tracking-widest font-bold mb-5 flex items-center">
+                <span className="w-8 h-1 bg-gold mr-4 rounded-full"></span>
+                De expert in beweging voor:
+              </p>
+              <div className="flex flex-wrap gap-3 md:gap-4">
                 {['Basisscholen', 'Middelbare scholen', 'Gemeenten', 'Kinderopvang'].map((target, idx) => (
-                  <span key={idx} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium border border-white/10 backdrop-blur-sm">
+                  <span key={idx} className="bg-white/10 hover:bg-gold/20 transition-colors text-white px-5 py-2.5 rounded-full text-sm md:text-base font-semibold border border-white/20 backdrop-blur-md shadow-lg flex items-center">
+                    <CheckCircle size={16} className="text-gold mr-2" />
                     {target}
                   </span>
                 ))}

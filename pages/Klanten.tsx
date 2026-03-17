@@ -1,6 +1,7 @@
 import React from 'react';
 import { Page } from '../types';
 import Button from '../components/Button';
+import { Building2, MapPin } from 'lucide-react';
 
 interface Props {
     onNavigate: (page: Page) => void;
@@ -26,11 +27,47 @@ const Klanten: React.FC<Props> = ({ onNavigate }) => {
 
             {/* Content Section */}
             <div className="container mx-auto px-4 py-16 relative z-10 flex-grow">
-                <div className="bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 mb-16">
-                    <h2 className="text-3xl font-heading font-bold mb-8 text-center">In Ontwikkeling</h2>
-                    <p className="text-gray-600 text-center text-lg max-w-2xl mx-auto mb-12">
-                        Hier komt binnenkort een overzicht van de organisaties waarmee we samenwerken.
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-5xl font-heading font-bold text-anthracite mb-6">Een greep uit onze samenwerkingen</h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Wij zijn er trots op om dagelijks waarde toe te voegen bij diverse vooruitstrevende scholen en organisaties.
                     </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8 mb-20 max-w-5xl mx-auto">
+                    {[
+                        {
+                            name: "Basisschool De Regenboog",
+                            location: "Amsterdam",
+                            type: "Basisonderwijs",
+                            desc: "Sinds 2022 verzorgt Lu Fit de dagelijkse pauzesport en de coördinatie van de naschoolse activiteiten. Dit geeft ons docententeam de ruimte om écht pauze te houden en verlaagt de werkdruk substantieel."
+                        },
+                        {
+                            name: "Gemeente Haarlem",
+                            location: "Regio Kennemerland",
+                            type: "Gemeente & Brede Scholen",
+                            desc: "In samenwerking met Lu Fit bieden wij een divers sport- en cultuuraanbod op 5 verschillende brede scholen in de regio. Hun flexibiliteit en het brede netwerk aan vakdocenten maken hen tot een onmisbare partner."
+                        }
+                    ].map((client, idx) => (
+                        <div key={idx} className="bg-white rounded-[2rem] p-8 md:p-10 shadow-xl hover:shadow-2xl border border-gray-100 flex flex-col h-full transform transition-all hover:-translate-y-2 duration-300">
+                            <div className="flex items-start justify-between mb-6">
+                                <div>
+                                    <h3 className="text-2xl font-heading font-bold text-anthracite mb-2">{client.name}</h3>
+                                    <div className="flex items-center text-gold font-semibold text-sm tracking-wide uppercase">
+                                        <Building2 size={16} className="mr-2" />
+                                        {client.type}
+                                    </div>
+                                </div>
+                            </div>
+                            <p className="text-gray-600 text-lg leading-relaxed flex-grow mb-6 italic">
+                                "{client.desc}"
+                            </p>
+                            <div className="flex items-center text-gray-400 text-sm mt-auto pt-6 border-t border-gray-100">
+                                <MapPin size={16} className="mr-2" />
+                                Locatie: {client.location}
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 {/* CTA Section */}

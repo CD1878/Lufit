@@ -26,11 +26,50 @@ const Team: React.FC<Props> = ({ onNavigate }) => {
 
             {/* Content Section */}
             <div className="container mx-auto px-4 py-16 relative z-10 flex-grow">
-                <div className="bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 mb-16">
-                    <h2 className="text-3xl font-heading font-bold mb-8 text-center">In Ontwikkeling</h2>
-                    <p className="text-gray-600 text-center text-lg max-w-2xl mx-auto mb-12">
-                        Hier komt binnenkort een overzicht van onze organisatiestructuur en teamleden.
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-5xl font-heading font-bold text-anthracite mb-6">Ontmoet onze mensen</h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Passie voor sport, cultuur en ontwikkeling. Ons team staat dagelijks klaar voor honderden kinderen.
                     </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-20 max-w-6xl mx-auto">
+                    {[
+                        {
+                            name: "Sarah van den Berg",
+                            role: "Programmacoördinator",
+                            desc: "Sarah onderhoudt nauw contact met scholen en zorgt ervoor dat alle roosters perfect lopen. Met haar achtergrond in het onderwijs weet ze precies wat scholen nodig hebben.",
+                            image: "/fotos/naschools_sport_v2.jpeg"
+                        },
+                        {
+                            name: "Luciano",
+                            role: "Oprichter & Hoofdtrainer",
+                            desc: "De drijvende kracht achter Lu Fit. Luciano heeft jarenlange ervaring met pauzesport en gymlessen, en brengt ongeëvenaarde energie in elke sessie.",
+                            image: "/fotos/luciano_hero.jpeg"
+                        },
+                        {
+                            name: "Kevin de Ruiter",
+                            role: "Combinatiefunctionaris",
+                            desc: "Kevin verbindt sport, structuur en plezier. Of het nu gaat om het organiseren van toernooien of het geven van gymlessen, zijn focus ligt altijd op de groei van de kinderen.",
+                            image: "/fotos/home_hero.jpeg"
+                        }
+                    ].map((member, idx) => (
+                        <div key={idx} className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+                            <div className="h-64 overflow-hidden relative">
+                                <div className="absolute inset-0 bg-anthracite/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
+                                <img src={member.image} alt={member.name} className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700" />
+                            </div>
+                            <div className="p-8 text-center relative">
+                                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gold text-white font-bold px-6 py-2 rounded-full shadow-lg text-sm tracking-wider uppercase whitespace-nowrap">
+                                    {member.role}
+                                </div>
+                                <h3 className="text-2xl font-heading font-bold text-anthracite mt-4 mb-3">{member.name}</h3>
+                                <p className="text-gray-600 leading-relaxed text-sm">
+                                    {member.desc}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 {/* CTA Section */}

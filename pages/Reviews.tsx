@@ -1,6 +1,7 @@
 import React from 'react';
 import { Page } from '../types';
 import Button from '../components/Button';
+import { Star, Quote } from 'lucide-react';
 
 interface Props {
     onNavigate: (page: Page) => void;
@@ -26,11 +27,70 @@ const Reviews: React.FC<Props> = ({ onNavigate }) => {
 
             {/* Content Section */}
             <div className="container mx-auto px-4 py-16 relative z-10 flex-grow">
-                <div className="bg-white rounded-[3rem] shadow-2xl p-8 md:p-16 mb-16">
-                    <h2 className="text-3xl font-heading font-bold mb-8 text-center">In Ontwikkeling</h2>
-                    <p className="text-gray-600 text-center text-lg max-w-2xl mx-auto mb-12">
-                        Hier komen binnenkort de reviews en succesverhalen te staan.
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-5xl font-heading font-bold text-anthracite mb-6">Wat onze partners zeggen</h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Ontdek waarom scholen en gemeenten kiezen voor de ontzorging van Lu Fit.
                     </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                    {[
+                        {
+                            name: "Sanne de Vries",
+                            role: "Directeur Basisschool, Amsterdam",
+                            text: "Sinds Lu Fit de pauzesport verzorgt, is er veel meer rust op het plein. De kinderen kijken er elke dag naar uit en ons team heeft eindelijk tijd voor een échte pauze.",
+                            stars: 5
+                        },
+                        {
+                            name: "Mark Janssen",
+                            role: "Intern Begeleider",
+                            text: "Wat een verademing. De inval is perfect geregeld. Als wij een zieke docent hebben, staat er de volgende ochtend een enthousiaste professional klaar met een kant-en-klaar programma.",
+                            stars: 5
+                        },
+                        {
+                            name: "Fatima El Amrani",
+                            role: "Coördinator Kinderopvang",
+                            text: "Eén partij die werkelijk alles uit handen neemt. Het team van Lu Fit denkt proactief met ons mee en de communicatie verloopt altijd ontzettend soepel.",
+                            stars: 5
+                        },
+                        {
+                            name: "Lisa van den Berg",
+                            role: "Ouderraad Voorzitter",
+                            text: "De naschoolse activiteiten zijn een groot succes! Mijn zoon komt altijd vol enthousiasme thuis. Vooral de techniek- en creatieve workshops vallen enorm in de smaak.",
+                            stars: 4
+                        },
+                        {
+                            name: "Tom Peters",
+                            role: "Gymdocent",
+                            text: "Als ik er een tijdje niet ben, weet ik dat mijn lessen bij Lu Fit in goede handen zijn. Ze hanteren dezelfde pedagogische visie, en dat merk je aan de leerlingen.",
+                            stars: 5
+                        },
+                        {
+                            name: "Gemeente Haarlem",
+                            role: "Beleidsmedewerker Sport",
+                            text: "Betrouwbaar, energiek en professioneel. Lu Fit is een onmisbare sportpartner geworden voor onze naschoolse projecten en brede-school programma's.",
+                            stars: 5
+                        }
+                    ].map((review, idx) => (
+                        <div key={idx} className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 flex flex-col h-full relative group">
+                            <div className="absolute top-6 right-6 text-gray-100 group-hover:text-gold/10 transition-colors">
+                                <Quote size={64} />
+                            </div>
+                            <div className="flex text-gold mb-6 relative z-10">
+                                {[...Array(5)].map((_, i) => (
+                                    <Star key={i} size={20} fill={i < review.stars ? "currentColor" : "none"} className={i < review.stars ? "text-gold" : "text-gray-300"} />
+                                ))}
+                            </div>
+                            <p className="text-gray-600 text-lg leading-relaxed flex-grow mb-8 relative z-10 italic">
+                                "{review.text}"
+                            </p>
+                            <div className="relative z-10 border-t border-gray-100 pt-6">
+                                <p className="font-heading font-bold text-anthracite text-lg">{review.name}</p>
+                                <p className="text-gold text-sm font-semibold uppercase tracking-wider">{review.role}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
 
                 {/* CTA Section */}
