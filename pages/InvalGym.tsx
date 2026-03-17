@@ -25,7 +25,7 @@ const InvalGym: React.FC<Props> = ({ onNavigate }) => {
                     <p className="text-lg md:text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
                         Wij verzorgen niet alleen de vervanging, maar regelen ook de planning, afstemming en administratie rondom inval.
                     </p>
-                    <Button size="lg" onClick={() => onNavigate(Page.Contact)}>Regel direct inval</Button>
+                    <Button size="lg" onClick={() => onNavigate(Page.Contact)}>Vraag een offerte aan</Button>
                 </div>
             </section>
 
@@ -88,7 +88,7 @@ const InvalGym: React.FC<Props> = ({ onNavigate }) => {
                     <div className="absolute inset-0 bg-gold/5"></div>
                     <div className="relative z-10">
                         <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">Laat ons alles rondom inval regelen.</h2>
-                        <Button variant="primary" size="xl" onClick={() => onNavigate(Page.Contact)}>Neem contact op</Button>
+                        <Button variant="primary" size="xl" onClick={() => onNavigate(Page.Contact)}>Samenwerken met Lu Fit</Button>
                     </div>
                 </div>
             </div>

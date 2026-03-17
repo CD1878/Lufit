@@ -24,10 +24,16 @@ const Naschools: React.FC<Props> = ({ onNavigate }) => {
           <div className="absolute inset-0 bg-gradient-to-r from-anthracite via-anthracite/90 to-transparent"></div>
         </div>
         <div className="container mx-auto px-4 text-center max-w-4xl relative z-10 pt-8 md:pt-12">
-          <h1 className="text-3xl md:text-6xl font-heading font-bold mb-6 leading-tight">Ontdekken na schooltijd. <br /><span className="text-gold">Wij regelen het complete programma.</span></h1>
-          <p className="text-lg md:text-2xl text-gray-300 mb-0 leading-relaxed max-w-3xl mx-auto">
+          <h1 className="text-3xl md:text-6xl font-heading font-bold mb-6 leading-tight">Naschoolse activiteiten voor scholen. <br /><span className="text-gold">Wij regelen het complete programma.</span></h1>
+          <p className="text-xl md:text-3xl font-heading text-gold mb-6 font-bold tracking-wide">
+            Sport &bull; Kunst & Cultuur &bull; Techniek &bull; Creatieve workshops
+          </p>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
             Lu Fit stelt het programma samen, werft docenten, regelt inschrijvingen, onderhoudt contact met ouders en bewaakt de kwaliteit.
           </p>
+          <Button variant="primary" size="lg" onClick={() => onNavigate(Page.Contact)}>
+             Plan een kennismaking
+          </Button>
         </div>
       </section>
 
@@ -72,7 +78,7 @@ const Naschools: React.FC<Props> = ({ onNavigate }) => {
               </div>
 
               <div className="pt-4 hidden md:block">
-                <Button variant="primary" size="lg" onClick={() => onNavigate(Page.Contact)}>Stel samen een programma op</Button>
+                <Button variant="primary" size="lg" onClick={() => onNavigate(Page.Contact)}>Plan een kennismaking</Button>
               </div>
             </div>
             <div className="relative flex flex-col items-center">
@@ -83,7 +89,7 @@ const Naschools: React.FC<Props> = ({ onNavigate }) => {
                 className="relative rounded-[2rem] shadow-2xl w-full object-cover h-[300px] md:h-[400px] z-10 mb-8 md:mb-0"
               />
               <div className="md:hidden w-full">
-                <Button variant="primary" size="lg" className="w-full justify-center" onClick={() => onNavigate(Page.Contact)}>Stel samen een programma op</Button>
+                <Button variant="primary" size="lg" className="w-full justify-center" onClick={() => onNavigate(Page.Contact)}>Plan een kennismaking</Button>
               </div>
             </div>
           </div>

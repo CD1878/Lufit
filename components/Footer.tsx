@@ -27,6 +27,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <h3 className="text-gold font-heading font-bold text-lg">Snel naar</h3>
             <ul className="space-y-2">
               {[
+                { label: 'Klanten', page: Page.Klanten },
+                { label: 'Ervaringen (Reviews)', page: Page.Reviews },
+                { label: 'Team & Structuur', page: Page.Team },
                 { label: 'Inval Gymlessen', page: Page.InvalGym },
                 { label: 'Pauzesport', page: Page.PauzeSport },
                 { label: 'Naschoolse Activiteiten', page: Page.Naschools },

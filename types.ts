@@ -1,13 +1,16 @@
 import React from 'react';
 
 export enum Page {
-  Home = 'HOME',
-  InvalGym = 'INVAL_GYM',
-  PauzeSport = 'PAUZE_SPORT',
-  Naschools = 'NASCHOOLS',
-  TotaalOntzorgen = 'TOTAAL_ONTZORGEN',
-  OverOns = 'OVER_ONS',
-  Contact = 'CONTACT'
+  Home = 'home',
+  InvalGym = 'invalgym',
+  PauzeSport = 'pauzesport',
+  Naschools = 'naschools',
+  TotaalOntzorgen = 'totaalontzorgen',
+  OverOns = 'overons',
+  Team = 'team',
+  Klanten = 'klanten',
+  Reviews = 'reviews',
+  Contact = 'contact'
 }
 
 export interface NavItem {

@@ -55,7 +55,7 @@ const OverOns: React.FC<Props> = ({ onNavigate }) => {
                         <p className="text-gray-600 leading-loose text-lg mb-8">
                             Een betrokken team van vakdocenten, sportcoaches en programmacoördinatoren met hart voor onderwijs. We denken mee, schakelen snel en nemen verantwoordelijkheid.
                         </p>
-                        <Button variant="outline" onClick={() => onNavigate(Page.Contact)}>Maak kennis met ons team</Button>
+                        <Button variant="outline" onClick={() => onNavigate(Page.Contact)}>Samenwerken met Lu Fit</Button>
                     </div>
                 </div>
 

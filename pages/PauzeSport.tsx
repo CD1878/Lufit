@@ -78,7 +78,7 @@ const PauzeSport: React.FC<Props> = ({ onNavigate }) => {
             <p className="text-xl md:text-2xl text-gray-300 mb-10 leading-relaxed">
               Minder onrust, betere concentratie en een positieve sfeer op school. Jullie team hoeft alleen de deur open te doen.
             </p>
-            <Button size="xl" onClick={() => onNavigate(Page.Contact)}>Besteed jullie pauzesport uit</Button>
+            <Button size="xl" onClick={() => onNavigate(Page.Contact)}>Plan een kennismaking</Button>
           </div>
         </div>
       </div>

@@ -12,8 +12,9 @@ const navItems: NavItem[] = [
   { label: 'Inval Gymlessen', page: Page.InvalGym },
   { label: 'Pauzesport', page: Page.PauzeSport },
   { label: 'Naschools', page: Page.Naschools },
-  { label: 'Totaal Ontzorgen', page: Page.TotaalOntzorgen },
-  { label: 'Over Lu Fit', page: Page.OverOns },
+  { label: 'Klanten', page: Page.Klanten },
+  { label: 'Reviews', page: Page.Reviews },
+  { label: 'Team', page: Page.Team },
   { label: 'Contact', page: Page.Contact },
 ];
 

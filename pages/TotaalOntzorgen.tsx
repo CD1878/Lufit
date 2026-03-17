@@ -23,7 +23,7 @@ const TotaalOntzorgen: React.FC<Props> = ({ onNavigate }) => {
                             Geen losse aanbieders of verschillende contactpersonen. Lu Fit neemt de regie. Wij coördineren, plannen en voeren uit. Van gymles tot naschoolse workshop.
                         </p>
                         <div className="flex justify-center">
-                            <Button size="xl" onClick={() => onNavigate(Page.Contact)}>Bespreek jullie situatie</Button>
+                            <Button size="xl" onClick={() => onNavigate(Page.Contact)}>Plan een kennismaking</Button>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ const TotaalOntzorgen: React.FC<Props> = ({ onNavigate }) => {
                         </p>
                         <div className="mt-auto">
                             <Button variant="outline" onClick={() => onNavigate(Page.Contact)} className="w-full md:w-auto">
-                                Ontvang een totaalplan <ArrowRight className="ml-2" size={18} />
+                                Samenwerken met Lu Fit <ArrowRight className="ml-2" size={18} />
                             </Button>
                         </div>
                     </div>

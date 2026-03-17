@@ -35,6 +35,18 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               <Button onClick={() => onNavigate(Page.Contact)}>Plan kennismaking</Button>
               <Button variant="outline" onClick={() => onNavigate(Page.Naschools)}>Bekijk ons aanbod</Button>
             </div>
+            
+            {/* Target Audiences */}
+            <div className="pt-8 md:pt-12 border-t border-gray-700/50">
+              <p className="text-sm text-gray-400 uppercase tracking-widest font-semibold mb-4">De expert in beweging voor:</p>
+              <div className="flex flex-wrap gap-3">
+                {['Basisscholen', 'Middelbare scholen', 'Gemeenten', 'Kinderopvang'].map((target, idx) => (
+                  <span key={idx} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium border border-white/10 backdrop-blur-sm">
+                    {target}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -63,6 +75,78 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Categorieën & Aanbod */}
+      <section className="py-16 bg-lightgray relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-heading font-bold text-anthracite mb-6">Ons veelzijdige aanbod</h2>
+            <p className="text-xl text-gray-600">
+              Van sport tot creativiteit, wij bieden een compleet en wisselend programma.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              {
+                title: "Sport & Beweging",
+                lessons: ["Aapjeskooi", "Voetbal", "Freerunning", "Zelfverdediging"]
+              },
+              {
+                title: "Kunst & Cultuur",
+                lessons: ["Theater", "Schilderen", "Fotografie", "Koken"]
+              },
+              {
+                title: "Techniek & Makers",
+                lessons: ["Robotica", "Programmeren", "Bouwen", "Proefjes"]
+              },
+              {
+                title: "Creatieve workshops",
+                lessons: ["Knutselen", "Sieraden maken", "Zandkastelen", "Houtbewerking"]
+              },
+              {
+                title: "Dans & Muziek",
+                lessons: ["Hiphop", "Streetdance", "Zangles", "Dj workshops"]
+              }
+            ].map((cat, idx) => (
+              <div key={idx} className="bg-white rounded-3xl p-6 shadow-md border-t-4 border-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-lg font-heading font-bold text-anthracite mb-4 pb-2 border-b border-gray-100">{cat.title}</h3>
+                <ul className="space-y-2">
+                  {cat.lessons.map((lesson, lIdx) => (
+                    <li key={lIdx} className="text-gray-600 flex items-center text-sm">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></div>
+                      {lesson}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button variant="outline" onClick={() => onNavigate(Page.Naschools)}>Bekijk de details van ons aanbod</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Track Record / Statistics */}
+      <section className="py-20 bg-anthracite text-white relative">
+        <div className="absolute inset-0 bg-gold/5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
+            {[
+              { number: "40+", label: "Scholen & Gemeenten" },
+              { number: "2500+", label: "Kinderen per week" },
+              { number: "75+", label: "Trainers & Begeleiders" },
+              { number: "10+", label: "Jaren Ervaring" }
+            ].map((stat, idx) => (
+              <div key={idx} className="space-y-2">
+                <div className="text-4xl md:text-6xl font-heading font-bold text-gold drop-shadow-md">{stat.number}</div>
+                <div className="text-sm md:text-lg text-gray-300 font-medium tracking-wide">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
