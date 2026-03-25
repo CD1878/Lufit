@@ -115,35 +115,16 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 lessons: ["Hiphop", "Streetdance", "Zangles", "Dj workshops"]
               }
             ].map((cat, idx) => (
-              <div key={idx} className="bg-white rounded-3xl p-6 shadow-md border-t-4 border-gold hover:shadow-xl transition-shadow">
-                {cat.title === "Creatieve workshops" ? (
-                  <div className="bg-white rounded-[2rem] p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow flex flex-col h-full">
-                    <div className="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
-                      <Brush size={28} />
-                    </div>
-                    <h3 className="text-xl font-heading font-bold text-anthracite mb-4">Creatieve workshops</h3>
-                    <ul className="text-gray-600 space-y-3 flex-grow">
-                      {cat.lessons.map((item, i) => (
-                        <li key={i} className="flex items-center">
-                          <span className="w-1.5 h-1.5 bg-gold rounded-full mr-3"></span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : (
-                  <>
-                    <h3 className="text-lg font-heading font-bold text-anthracite mb-4 pb-2 border-b border-gray-100">{cat.title}</h3>
-                    <ul className="space-y-2">
-                      {cat.lessons.map((lesson, lIdx) => (
-                        <li key={lIdx} className="text-gray-600 flex items-center text-sm">
-                          <div className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></div>
-                          {lesson}
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
+              <div key={idx} className="bg-white rounded-3xl p-6 shadow-md border-t-4 border-gold hover:shadow-xl transition-shadow flex flex-col h-full">
+                <h3 className="text-lg font-heading font-bold text-anthracite mb-4 pb-2 border-b border-gray-100">{cat.title}</h3>
+                <ul className="space-y-2 flex-grow">
+                  {cat.lessons.map((lesson, lIdx) => (
+                    <li key={lIdx} className="text-gray-600 flex items-center text-sm">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gold mr-3 flex-shrink-0"></div>
+                      {lesson}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
