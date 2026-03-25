@@ -11,7 +11,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
     <div className="fade-in bg-gray-50">
       {/* Hero Section - Straight Bottom */}
-      <section className="relative bg-anthracite text-white pt-24 pb-32 md:pt-40 md:pb-56 min-h-[60vh] md:min-h-[85vh] flex flex-col justify-center overflow-hidden shadow-2xl">
+      <section className="relative bg-anthracite text-white pt-24 pb-16 md:pt-40 md:pb-56 md:min-h-[85vh] flex flex-col justify-center overflow-hidden shadow-2xl">
         <div className="absolute inset-0 z-0">
           <img
             src="/fotos/home_hero.jpeg"
