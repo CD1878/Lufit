@@ -11,7 +11,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
     <div className="fade-in bg-gray-50">
       {/* Hero Section - Straight Bottom */}
-      <section className="relative bg-anthracite text-white pt-32 pb-40 md:pt-40 md:pb-56 min-h-[70vh] md:min-h-[85vh] flex flex-col justify-center overflow-hidden shadow-2xl">
+      <section className="relative bg-anthracite text-white pt-24 pb-32 md:pt-40 md:pb-56 min-h-[60vh] md:min-h-[85vh] flex flex-col justify-center overflow-hidden shadow-2xl">
         <div className="absolute inset-0 z-0">
           <img
             src="/fotos/home_hero.jpeg"
@@ -21,7 +21,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="absolute inset-0 bg-gradient-to-r from-anthracite via-anthracite/90 to-transparent"></div>
         </div>
 
-        <div className="container mx-auto px-4 z-10 relative py-12 md:py-0">
+        <div className="container mx-auto px-4 z-10 relative pt-4 pb-12 md:py-0">
           <div className="max-w-3xl space-y-6 md:space-y-8">
             <h1 className="text-3xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight">
               Kinderen in beweging. <br />
@@ -31,9 +31,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               Wij verzorgen inval gymlessen, pauzesport en naschoolse activiteiten én nemen de complete coördinatie van sport, kunst, cultuur en recreatie over.
               <br /><span className="font-semibold text-white block mt-4 text-xl">Eén partner. Alles geregeld.</span>
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-6">
-              <Button onClick={() => onNavigate(Page.Contact)}>Plan kennismaking</Button>
-              <Button variant="outline" onClick={() => onNavigate(Page.Naschools)}>Bekijk ons aanbod</Button>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-6 items-start">
+              <div className="w-full sm:w-auto">
+                <Button onClick={() => onNavigate(Page.Contact)} className="w-full sm:w-auto justify-center">Plan kennismaking</Button>
+              </div>
+              <div className="w-full sm:w-auto">
+                <Button variant="outline" onClick={() => onNavigate(Page.Naschools)} className="w-full sm:w-auto justify-center">Bekijk ons aanbod</Button>
+              </div>
             </div>
             
             {/* Target Audiences */}

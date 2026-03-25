@@ -98,7 +98,7 @@ const WerkenBij: React.FC<Props> = ({ onNavigate }) => {
           </p>
           <div className="relative z-10">
             <a href="mailto:info@lufit.nl" className="inline-block bg-gold hover:bg-yellow-500 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-gold/30 text-lg">
-              Solliciteer nu (info@lufit.nl)
+              Solliciteer nu
             </a>
           </div>
         </div>
