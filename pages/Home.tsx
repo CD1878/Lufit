@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page } from '../types';
 import Button from '../components/Button';
-import { ArrowRight, Waves, CheckCircle, Paintbrush, TestTubeDiagonal, Dumbbell, Brush } from 'lucide-react';
+import { ArrowRight, Waves, CheckCircle, Paintbrush, TestTubeDiagonal, Dumbbell, Brush, Activity, Users, Layout, Calendar } from 'lucide-react';
 
 interface HomeProps {
   onNavigate: (page: Page) => void;
