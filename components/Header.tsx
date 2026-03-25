@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
             className="flex items-center space-x-4 cursor-pointer"
             onClick={() => handleNavClick(Page.Home)}
           >
-            <img src="/Final.svg?v=svg2" alt="Lu Fit Logo" className="h-16 md:h-24 w-auto object-contain drop-shadow-lg" />
+            <img src="/Final.png" alt="Lu Fit Logo" className="h-16 md:h-24 w-auto object-contain drop-shadow-lg" />
             <span className="text-2xl md:text-3xl font-heading font-bold text-white tracking-widest hidden sm:block">
               LU FIT
             </span>
