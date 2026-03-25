@@ -9,11 +9,11 @@ interface Props {
 
 const Naschools: React.FC<Props> = ({ onNavigate }) => {
   const activities = [
-    { title: "Sport & Clinics", icon: <Trophy size={32} />, desc: "Kennismaken met diverse sporten.", image: "/fotos/naschools_sport_v2.jpeg" },
-    { title: "Creatief", icon: <Palette size={32} />, desc: "Tekenen, schilderen en knutselen.", image: "/fotos/naschools_creatief.jpeg" },
-    { title: "Cultuur & Dans", icon: <Music size={32} />, desc: "Theater, dans en expressie.", image: "/fotos/naschools_dans.jpeg" },
-    { title: "Culinair", icon: <Utensils size={32} />, desc: "Gezonde kooklessen.", image: "/fotos/naschools_sport.jpeg" },
-    { title: "Techniek", icon: <Dna size={32} />, desc: "Wetenschap en proefjes.", image: "/fotos/naschools_bottom.jpeg" },
+    { title: "Sport & Clinics", icon: <Trophy size={32} />, desc: "Kennismaken met diverse sporten.", image: "/fotos/SPORT%20-%20in%20Lufit%20kleuren.jpeg" },
+    { title: "Creatief", icon: <Palette size={32} />, desc: "Tekenen, schilderen en knutselen.", image: "/fotos/CREATIEF%20-%20in%20Lufit%20kleuren%20.jpeg" },
+    { title: "Cultuur & Dans", icon: <Music size={32} />, desc: "Theater, dans en expressie.", image: "/fotos/DANS%20-%20in%20Lufit%20kleuren.jpeg" },
+    { title: "Culinair", icon: <Utensils size={32} />, desc: "Gezonde kooklessen.", image: "/fotos/KOKEN%20-%20in%20Lufit%20kleuren%20.jpeg" },
+    { title: "Techniek", icon: <Dna size={32} />, desc: "Wetenschap en proefjes.", image: "/fotos/TECHNIEK%20-%20in%20Lufit%20kleuren.jpeg" },
   ];
 
   return (
@@ -84,7 +84,7 @@ const Naschools: React.FC<Props> = ({ onNavigate }) => {
             <div className="relative flex flex-col items-center">
               <div className="absolute inset-0 bg-gold/20 rounded-full blur-3xl transform translate-x-10 translate-y-10"></div>
               <img
-                src="/fotos/naschools_hero.jpeg"
+                src="/fotos/onze-rol-als-coordinator.jpeg"
                 alt="Coördinatie"
                 className="relative rounded-[2rem] shadow-2xl w-full object-cover h-[300px] md:h-[400px] z-10 mb-8 md:mb-0"
               />
