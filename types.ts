@@ -10,6 +10,7 @@ export enum Page {
   Team = 'team',
   Klanten = 'klanten',
   Reviews = 'reviews',
+  WerkenBij = 'werkenbij',
   Contact = 'contact'
 }
 

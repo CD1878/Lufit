@@ -15,6 +15,7 @@ const navItems: NavItem[] = [
   { label: 'Klanten', page: Page.Klanten },
   { label: 'Reviews', page: Page.Reviews },
   { label: 'Team', page: Page.Team },
+  { label: 'Werken Bij', page: Page.WerkenBij },
   { label: 'Contact', page: Page.Contact },
 ];
 

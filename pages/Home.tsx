@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page } from '../types';
 import Button from '../components/Button';
-import { ArrowRight, CheckCircle, Calendar, Users, Activity, Layout } from 'lucide-react';
+import { ArrowRight, Waves, CheckCircle, Paintbrush, TestTubeDiagonal, Dumbbell, Brush } from 'lucide-react';
 
 interface HomeProps {
   onNavigate: (page: Page) => void;
@@ -108,7 +108,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               },
               {
                 title: "Creatieve workshops",
-                lessons: ["Knutselen", "Sieraden maken", "Zandkastelen", "Houtbewerking"]
+                lessons: ["Schilderen & Tekenen", "Handarbeid", "Koken & Bakken", "Sieraden maken"]
               },
               {
                 title: "Dans & Muziek",
@@ -116,15 +116,34 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               }
             ].map((cat, idx) => (
               <div key={idx} className="bg-white rounded-3xl p-6 shadow-md border-t-4 border-gold hover:shadow-xl transition-shadow">
-                <h3 className="text-lg font-heading font-bold text-anthracite mb-4 pb-2 border-b border-gray-100">{cat.title}</h3>
-                <ul className="space-y-2">
-                  {cat.lessons.map((lesson, lIdx) => (
-                    <li key={lIdx} className="text-gray-600 flex items-center text-sm">
-                      <div className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></div>
-                      {lesson}
-                    </li>
-                  ))}
-                </ul>
+                {cat.title === "Creatieve workshops" ? (
+                  <div className="bg-white rounded-[2rem] p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-shadow flex flex-col h-full">
+                    <div className="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center mb-6">
+                      <Brush size={28} />
+                    </div>
+                    <h3 className="text-xl font-heading font-bold text-anthracite mb-4">Creatieve workshops</h3>
+                    <ul className="text-gray-600 space-y-3 flex-grow">
+                      {cat.lessons.map((item, i) => (
+                        <li key={i} className="flex items-center">
+                          <span className="w-1.5 h-1.5 bg-gold rounded-full mr-3"></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <>
+                    <h3 className="text-lg font-heading font-bold text-anthracite mb-4 pb-2 border-b border-gray-100">{cat.title}</h3>
+                    <ul className="space-y-2">
+                      {cat.lessons.map((lesson, lIdx) => (
+                        <li key={lIdx} className="text-gray-600 flex items-center text-sm">
+                          <div className="w-1.5 h-1.5 rounded-full bg-gold mr-3"></div>
+                          {lesson}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </div>
             ))}
           </div>
@@ -140,10 +159,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
             {[
-              { number: "40+", label: "Scholen & Gemeenten" },
-              { number: "2500+", label: "Kinderen per week" },
-              { number: "75+", label: "Trainers & Begeleiders" },
-              { number: "10+", label: "Jaren Ervaring" }
+              { number: "58", label: "Scholen & Gemeenten" },
+              { number: "3000+", label: "Kinderen per week" },
+              { number: "53", label: "Trainers & Begeleiders" },
+              { number: "15+", label: "Jaren Ervaring" }
             ].map((stat, idx) => (
               <div key={idx} className="space-y-2">
                 <div className="text-4xl md:text-6xl font-heading font-bold text-gold drop-shadow-md">{stat.number}</div>

@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Klanten from './pages/Klanten';
 import Reviews from './pages/Reviews';
 import Team from './pages/Team';
+import WerkenBij from './pages/WerkenBij';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<Page>(Page.Home);
@@ -31,6 +32,7 @@ function App() {
       case Page.Team: return <Team onNavigate={setCurrentPage} />;
       case Page.Klanten: return <Klanten onNavigate={setCurrentPage} />;
       case Page.Reviews: return <Reviews onNavigate={setCurrentPage} />;
+      case Page.WerkenBij: return <WerkenBij onNavigate={setCurrentPage} />;
       case Page.Contact: return <Contact onNavigate={setCurrentPage} />;
       default: return <Home onNavigate={setCurrentPage} />;
     }

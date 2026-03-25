@@ -30,6 +30,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 { label: 'Klanten', page: Page.Klanten },
                 { label: 'Ervaringen (Reviews)', page: Page.Reviews },
                 { label: 'Team & Structuur', page: Page.Team },
+                { label: 'Werken Bij Lu Fit', page: Page.WerkenBij },
                 { label: 'Inval Gymlessen', page: Page.InvalGym },
                 { label: 'Pauzesport', page: Page.PauzeSport },
                 { label: 'Naschoolse Activiteiten', page: Page.Naschools },

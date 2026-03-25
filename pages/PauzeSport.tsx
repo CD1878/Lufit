@@ -32,7 +32,7 @@ const PauzeSport: React.FC<Props> = ({ onNavigate }) => {
           <div className="relative group">
             <div className="absolute inset-0 bg-gold rounded-[2rem] rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
             <img
-              src="/fotos/pauzesport_watwijdoen.jpeg"
+              src="/fotos/pauze%20foto%20groot.jpeg"
               alt="Pauzesport"
               className="relative rounded-[2rem] shadow-xl border-4 border-white w-full object-cover h-[300px] md:h-[450px]"
             />
